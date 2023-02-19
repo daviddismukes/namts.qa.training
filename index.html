@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style_Quizsite.css">
+    <title>Quizsite</title>
+</head>
+
+<body>
+    <script>
+        function Corrige() {
+            var Q1 = "The response to question 1 is incorrect";
+            var Q2 = "The response to question 2 is incorrect";
+            var Q3 = "The response to question 3 is incorrect";
+            if ((document.getElementById('Q11').checked == false) && (document.getElementById('Q12').checked == true) && (document.getElementById('Q13').checked == false) && (document.getElementById('Q14').checked == false)) {
+                Q1 = "The respone to question 1 is correct";
+            }
+            if ((document.getElementById('Q21').checked == false) && (document.getElementById('Q22').checked == false) && (document.getElementById('Q23').checked == false) && (document.getElementById('Q24').checked == true)) {
+                Q2 = "The respone to question 2 is correct";
+            }
+            if ((document.getElementById('Q31').checked == false) && (document.getElementById('Q32').checked == false) && (document.getElementById('Q33').checked == true) && (document.getElementById('Q34').checked == false) && (document.getElementById('Q35').checked == false)) {
+                Q3 = "The respone to question 2 is correct";
+            }
+            alert(Q1 + "\n" + Q2 + "\n" + Q3);
+        }
+        function vider() {
+            document.getElementById('Q11').checked = false;
+            document.getElementById('Q12').checked = false;
+            document.getElementById('Q13').checked = false;
+            document.getElementById('Q14').checked = false;
+            document.getElementById('Q21').checked = false;
+            document.getElementById('Q22').checked = false;
+            document.getElementById('Q23').checked = false;
+            document.getElementById('Q24').checked = false;
+            document.getElementById('Q31').checked = false;
+            document.getElementById('Q32').checked = false;
+            document.getElementById('Q33').checked = false;
+            document.getElementById('Q34').checked = false;
+            document.getElementById('Q35').checked = false;
+        }
+    </script>
+    <fieldset>
+        <legend>
+            <h4>Quizsite</h4>
+        </legend>
+        <h1 id="kk">NAMTS QA Training</h1>
+        <hr>
+        <h4 id="jj">Work Package QA .</h4>
+        <h4>Question 1 :</h4>
+        <p>Difference between FWP and CWP?</p>
+        <ul>
+            <li><input type="checkbox" id="Q11"> Answer 1.</li>
+            <li><input type="checkbox" id="Q12"> CWP requires a record Objective Quality Evidence (OQE).</li>
+            <li><input type="checkbox" id="Q13"> Answer 2.</li>
+            <li><input type="checkbox" id="Q14"> Answer 3.</li>
+        </ul>
+        <h4>Question 2 :</h4>
+        <p>Major event that lead to the QA program?</p>
+        <ul>
+            <li><input type="checkbox" id="Q21"> Answer 1.</li>
+            <li><input type="checkbox" id="Q22"> Answer 2.</li>
+            <li><input type="checkbox" id="Q23"> Answer 3.</li>
+            <li><input type="checkbox" id="Q24"> USS Iwo Jima - Wrong bolts which lead to a steam leak.</li>
+        </ul>
+        <h4>Question 3 :</h4>
+        <p>What is OQE?</p>
+        <ul>
+            <li><input type="checkbox" id="Q31"> Answer 3.</li>
+            <li><input type="checkbox" id="Q32"> Answer 3.</li>
+            <li><input type="checkbox" id="Q33"> Objective Quality Evidence.</li>
+            <li><input type="checkbox" id="Q34"> Answer 4.</li>
+            <li><input type="checkbox" id="Q35"> Answer 5.</li>
+        </ul>
+
+        <div id="But">
+            <a href="Correction_quizsite.html"><button>Corrected Answers</button></a>
+            <button onclick="vider()">Erase1</button>
+            <button onclick="Corrige()">Correct1</button>
+        </div>
+    </fieldset>
+</body>
+
+</html>

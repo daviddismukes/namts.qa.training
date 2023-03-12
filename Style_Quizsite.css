@@ -1,9 +1,9 @@
 body{
-    background-color: rgb(193, 194, 179);
+    background-color: rgb(112,128,144); /*rgb(193, 194, 179);*/
 }
 /*  Examen  */
 #kk{
-    color:blueviolet;
+    color: rgb(0,0,128); /*blueviolet; */
     text-align: center;
 }
 #jj{

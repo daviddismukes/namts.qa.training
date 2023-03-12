@@ -15,16 +15,55 @@
             var Q1 = "The response to question 1 is incorrect";
             var Q2 = "The response to question 2 is incorrect";
             var Q3 = "The response to question 3 is incorrect";
-            if ((document.getElementById('Q11').checked == false) && (document.getElementById('Q12').checked == true) && (document.getElementById('Q13').checked == false) && (document.getElementById('Q14').checked == false)) {
-                Q1 = "The respone to question 1 is correct";
+			var Q4 = "The response to question 4 is incorrect";
+			var Q5 = "The response to question 5 is incorrect";
+            var Q6 = "The response to question 6 is incorrect";
+            var Q7 = "The response to question 7 is incorrect";
+			var Q8 = "The response to question 8 is incorrect";
+			var Q9 = "The response to question 9 is incorrect";
+			var Q10 = "The response to question 10 is incorrect";
+			
+			/*Question 1 */
+			if ((document.getElementById('Q11').checked == false) && (document.getElementById('Q12').checked == true) && (document.getElementById('Q13').checked == false) && (document.getElementById('Q14').checked == false)) {
+                Q1 = "The response to question 1 is correct";
             }
-            if ((document.getElementById('Q21').checked == false) && (document.getElementById('Q22').checked == false) && (document.getElementById('Q23').checked == false) && (document.getElementById('Q24').checked == true)) {
-                Q2 = "The respone to question 2 is correct";
+			/*Question 2 */
+			if ((document.getElementById('Q21').checked == false) && (document.getElementById('Q22').checked == false) && (document.getElementById('Q23').checked == false) && (document.getElementById('Q24').checked == true)) {
+                Q2 = "The response to question 2 is correct";
             }
-            if ((document.getElementById('Q31').checked == false) && (document.getElementById('Q32').checked == false) && (document.getElementById('Q33').checked == true) && (document.getElementById('Q34').checked == false) && (document.getElementById('Q35').checked == false)) {
-                Q3 = "The respone to question 2 is correct";
+			/*Question 3 */
+			if ((document.getElementById('Q31').checked == false) && (document.getElementById('Q32').checked == false) && (document.getElementById('Q33').checked == true) && (document.getElementById('Q34').checked == false) && (document.getElementById('Q35').checked == false)) {
+                Q3 = "The response to question 3 is correct";
             }
-            alert(Q1 + "\n" + Q2 + "\n" + Q3);
+			/*Question 4 */
+			if ((document.getElementById('Q41').checked == false) && (document.getElementById('Q42').checked == false) && (document.getElementById('Q43').checked == true) && (document.getElementById('Q44').checked == false) && (document.getElementById('Q45').checked == false)) {
+                Q4 = "The response to question 4 is correct";
+			}
+			/*Question 5 */
+			if ((document.getElementById('Q51').checked == true) && (document.getElementById('Q52').checked == false)) {
+                Q5 = "The response to question 5 is correct";
+			}
+			/*Question 6 */
+			if ((document.getElementById('Q61').checked == true) && (document.getElementById('Q62').checked == true) && (document.getElementById('Q63').checked == true) && (document.getElementById('Q64').checked == true) && (document.getElementById('Q65').checked == true)) {
+                Q6 = "The response to question 6 is correct";
+			}
+			/*Question 7 */
+			if ((document.getElementById('Q71').checked == true) && (document.getElementById('Q72').checked == true) && (document.getElementById('Q73').checked == true) && (document.getElementById('Q74').checked == true)) {
+                Q7 = "The response to question 7 is correct";
+			}
+			/*Question 8 */
+			if ((document.getElementById('Q81').checked == true) && (document.getElementById('Q82').checked == true) && (document.getElementById('Q83').checked == true) && (document.getElementById('Q84').checked == true)) {
+                Q8 = "The response to question 8 is correct";
+			}	
+			/*Question 9 */
+			if ((document.getElementById('Q91').checked == false) && (document.getElementById('Q92').checked == true)) {
+                Q9 = "The response to question 9 is correct";
+			}
+			/*Question 10 */
+			if ((document.getElementById('Q101').checked == true) && (document.getElementById('Q102').checked == false))	{		
+                Q10 = "The response to question 10 is correct";
+			}
+			alert(Q1 + "\n" + Q2 + "\n" + Q3 +"\n" + Q4 +"\n"+ Q5 +"\n"+ Q6 +"\n"+ Q7 +"\n"+ Q8 +"\n"+ Q9 +"\n"+ Q10 +"\n");
         }
         function vider() {
             document.getElementById('Q11').checked = false;
@@ -40,6 +79,30 @@
             document.getElementById('Q33').checked = false;
             document.getElementById('Q34').checked = false;
             document.getElementById('Q35').checked = false;
+			document.getElementById('Q41').checked = false;
+			document.getElementById('Q42').checked = false;
+			document.getElementById('Q43').checked = false;
+			document.getElementById('Q44').checked = false;
+			document.getElementById('Q45').checked = false;
+			document.getElementById('Q51').checked = false;
+			document.getElementById('Q52').checked = false;
+			document.getElementById('Q61').checked = false;
+			document.getElementById('Q62').checked = false;
+			document.getElementById('Q63').checked = false;
+			document.getElementById('Q64').checked = false;
+			document.getElementById('Q65').checked = false;
+			document.getElementById('Q71').checked = false;
+			document.getElementById('Q72').checked = false;
+			document.getElementById('Q73').checked = false;
+			document.getElementById('Q74').checked = false;
+			document.getElementById('Q81').checked = false;
+			document.getElementById('Q82').checked = false;
+			document.getElementById('Q83').checked = false;
+			document.getElementById('Q84').checked = false;
+			document.getElementById('Q91').checked = false;
+			document.getElementById('Q92').checked = false;
+			document.getElementById('Q101').checked = false;
+			document.getElementById('Q102').checked = false;
         }
     </script>
     <fieldset>
@@ -49,36 +112,100 @@
         <h1 id="kk">NAMTS QA Training</h1>
         <hr>
         <h4 id="jj">Work Package QA .</h4>
-        <h4>Question 1 :</h4>
+        
+		<h4>Question 1 :</h4>
         <p>Difference between FWP and CWP?</p>
         <ul>
-            <li><input type="checkbox" id="Q11"> Answer 1.</li>
-            <li><input type="checkbox" id="Q12"> CWP requires a record Objective Quality Evidence (OQE).</li>
-            <li><input type="checkbox" id="Q13"> Answer 2.</li>
-            <li><input type="checkbox" id="Q14"> Answer 3.</li>
+            <li><input type="checkbox" id="Q11"> CWP is used for when the ship is underway.</li>
+            <li><input type="checkbox" id="Q12"> CWP requires a record (OQE).</li>
+            <li><input type="checkbox" id="Q13"> FWP involves Outside repair activity.</li>
+            <li><input type="checkbox" id="Q14"> There is no difference.</li>
         </ul>
+		
         <h4>Question 2 :</h4>
-        <p>Major event that lead to the QA program?</p>
+        <p>Major event involving the use of black oxide coated brass fasteners (BOCBF) that lead to the Navy QA program?</p>
         <ul>
-            <li><input type="checkbox" id="Q21"> Answer 1.</li>
-            <li><input type="checkbox" id="Q22"> Answer 2.</li>
-            <li><input type="checkbox" id="Q23"> Answer 3.</li>
-            <li><input type="checkbox" id="Q24"> USS Iwo Jima - Wrong bolts which lead to a steam leak.</li>
+            <li><input type="checkbox" id="Q21"> USS Forrestal.</li>
+            <li><input type="checkbox" id="Q22"> USS Thresher.</li>
+            <li><input type="checkbox" id="Q23"> USS Mccain.</li>
+            <li><input type="checkbox" id="Q24"> USS Iwo Jima.</li>
         </ul>
+		
         <h4>Question 3 :</h4>
         <p>What is OQE?</p>
         <ul>
-            <li><input type="checkbox" id="Q31"> Answer 3.</li>
-            <li><input type="checkbox" id="Q32"> Answer 3.</li>
+            <li><input type="checkbox" id="Q31"> First section of SDS.</li>
+            <li><input type="checkbox" id="Q32"> Required in the 43P1.</li>
             <li><input type="checkbox" id="Q33"> Objective Quality Evidence.</li>
-            <li><input type="checkbox" id="Q34"> Answer 4.</li>
-            <li><input type="checkbox" id="Q35"> Answer 5.</li>
+            <li><input type="checkbox" id="Q34"> Required for DFS.</li>
+            <li><input type="checkbox" id="Q35"> Operational quick estimate.</li>
+        </ul>
+		
+        <h4>Question 4 :</h4>
+        <p>Over all in charge of QA?</p>
+        <ul>
+            <li><input type="checkbox" id="Q41"> WCS.</li>
+            <li><input type="checkbox" id="Q42"> MPA.</li>
+            <li><input type="checkbox" id="Q43"> QAO.</li> 
+            <li><input type="checkbox" id="Q44"> RO.</li>
+            <li><input type="checkbox" id="Q45"> TAO.</li>
+        </ul>
+		
+        <h4>Question 5 :</h4>
+        <p>(True or False) A DFS defined as "MINOR" when: 1) Associated with a temporary repair to a system or component not involving equipment or personnel safety, or not involving integrity or operability of equipment essential to craft mission.
+			2) For any "As found" conditions discovered during a maintenance action that will not be corrected prior to the crafts underway.</p>
+        <ul>
+            <li><input type="checkbox" id="Q51"> True.</li>
+            <li><input type="checkbox" id="Q52"> False.</li>
+        </ul>
+		
+	    <h4>Question 6 :</h4>
+        <p>What are the required parts of a FWP?</p>
+        <ul>
+            <li><input type="checkbox" id="Q61"> Materials.</li>
+            <li><input type="checkbox" id="Q62"> Initial conditions.</li>
+            <li><input type="checkbox" id="Q63"> Procedure.</li>
+            <li><input type="checkbox" id="Q64"> Test and Inspection.</li>
+            <li><input type="checkbox" id="Q65"> Restoration.</li>
         </ul>
 
-        <div id="But">
-            <a href="Correction_quizsite.html"><button>Corrected Answers</button></a>
-            <button onclick="vider()">Erase1</button>
-            <button onclick="Corrige()">Correct1</button>
+		<h4>Question 7 :</h4>
+        <p>When inspections or measurements are performed using Test, Measuring, and Diagnostic Equipment (TMDE), what data is required to be recorded on the QA form 17?</p>
+        <ul>
+            <li><input type="checkbox" id="Q71"> a. Calibration due date.</li>
+            <li><input type="checkbox" id="Q72"> b. Tool Range.</li>
+            <li><input type="checkbox" id="Q73"> c. Serial number.</li>
+            <li><input type="checkbox" id="Q74"> d. Nomenclature.</li>
+        </ul>
+
+		<h4>Question 8 :</h4>
+        <p>Definition of re-work from the JFMM (Joint Fleet Maintenance Manual 4790.3)</p>
+        <ul>
+            <li><input type="checkbox" id="Q81"> The unplanned repetition of a step or a series of steps in a FWP.</li>
+            <li><input type="checkbox" id="Q82"> Any work that must be preformed without quality.</li>
+            <li><input type="checkbox" id="Q83"> Work that cannot be completed within a scheduled CMAV.</li>
+            <li><input type="checkbox" id="Q84"> A WAF that is issued a stop-work.</li>
+        </ul>
+
+		<h4>Question 9 :</h4>
+        <p>(True or False)QA Form 14 - Surveillance/Monitoring/Audit Discrepancy Record does NOT Provide a method or means of reporting discrepancies found or noted by auditors during audits and surveillance and corrective actions taken by the WC or division. 
+			To monitor the results of internal audits used as part of a program of trend evaluation to improve overall FMA (Fleet Maintenance Activity) and CSMP (Current Ship's Maintenance Project) maintenance quality.</p>
+        <ul>
+            <li><input type="checkbox" id="Q91"> True.</li>
+            <li><input type="checkbox" id="Q92"> False</li>
+        </ul>	
+
+		<h4>Question 10 :</h4>
+        <p>(True or False) FWP Closeout are reviewed and approved by the LPO/LWC supervisor and designated assist LPO/WCS's for satisfactory completion?</p>
+        <ul>
+            <li><input type="checkbox" id="Q101"> True.</li>
+            <li><input type="checkbox" id="Q102"> False.</li>
+        </ul>
+		
+		<div id="But">         
+            <button onclick="Corrige()">Grade your Answers</button>
+			<button onclick="vider()">Erase</button>
+			<a href="Correction_quizsite.html"><button>Correct Answers</button></a>
         </div>
     </fieldset>
 </body>
